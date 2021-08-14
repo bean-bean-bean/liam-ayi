@@ -1,0 +1,8 @@
+<h1>Welcome to the Liam Ayi messaging app</h1>
+
+<%= link_to "Create a new message", new_message_path %>
+
+<% @messages.each do |message| %>
+  <%=link_to message.title, message_path(message) %>
+  <%= message.content %>
+<% end %>
